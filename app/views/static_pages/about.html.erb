@@ -1,19 +1,75 @@
 <% provide(:title, "About") %>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+  <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
-  </head>
-  <body>
-    <h1>About</h1>
-    <p>
-      The <a href="http://www.railstutorial.org/"><em>Ruby on Rails
-      Tutorial</em></a> is a
-      <a href="http://www.railstutorial.org/book">book</a> and
-      <a href="http://screencasts.railstutorial.org/">screencast series</a>
-      to teach web development with
-      <a href="http://rubyonrails.org/">Ruby on Rails</a>.
-      This is the sample application for the tutorial.
-    </p>
-  </body>
-</html>
+      <meta charset="utf-8">
+      <title>Sample</title>
+      <!-- <link rel="stylesheet" href="layout.css"> -->
+    </head>
+    <body>
+      <div class="container">
+        <header>
+         <div class="mypic">   
+          <%= image_tag("me.jpg", alt:"Ruben" ) %>
+          </div>
+          <nav class="top_nav">
+            <h1>Ruben Sanchez</h1>
+            <h5>Future Web Developer</h5>
+          </nav>
+          <div class="clear"></div>
+        </header>
+        <section class="left_side">
+          <article>
+
+              <h2> About me</h2>
+              <p>My name is Ruben Sanchez, I'm very excited to start this new
+                adventure, and hope that it
+                will create the opportunity to find a new start in this great industry.</p>
+
+              <h3><br>What's your backgroud?</h3>
+              <p>I was born in Mexico but I have lived most of my life here in Salt Lake City.
+                I have lived here for over 21 years, and would consider my self part of Utah now.</p>
+
+              <h3><br>What do you do for fun?</h3>
+              <p>I love computer games, my favorite all time game has to be World of Warcraft. I was raised
+                playing video games and they became a big part of my life then and now. I also love watching
+                television shows, not that I watch them on a television but on my computer now a days. Shows like
+                Game of Thrones, The Walking Dead, and Breaking Bad have brought so much joy in my life.</p>
+              <h3><br>What's your history with coding?</h3>
+              <p>My first introduction to coding was my sophomore year in high school, it was a C++ introduction class.
+                It was not very exiting at the time, later while attending SLCC I took their intro to computer science where we learn some
+                java. Never really made anything out of it, but now with the prep-work done I'm ready to start
+                learning and building some new awesome stuff.</p>
+
+                <footer>
+                - written by Ruben S -
+                </footer>
+          </article>
+        </section>
+        <aside class="right_side">
+          <div>
+            <h2>Social Links</h2>
+            <ul>
+              <li><a href="https://www.facebook.com/Rsanchez6513">Facebook</a></li>
+              <li><a href="https://twitter.com/badguycries">Twitter</a></li>
+            </ul>
+          </div>
+          <div>
+            <form action="" method="get" class="form">
+          <fieldset >
+            <legend>Contact me!</legend><br>
+            <label for="name">Name:</label><input type="text" name="name" id="name" ><br>
+            <label for="email">Email:</label><input type="text" name="email" id="email"><br>
+            <label for="message">Message:<br><label><textarea name="message" rows="6" cols="20" id="message">...</textarea><br>
+            <input type="submit" value="Submit"><input type="reset" value="reset">
+            </fieldset>
+            </form>
+            </article>
+          </div>
+        </aside>
+        <footer class="page_footer">
+
+        </footer>
+      </div>
+    </body>
+  </html>

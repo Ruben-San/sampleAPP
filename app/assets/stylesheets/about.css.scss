@@ -1,0 +1,50 @@
+/* Get rid of default padding and margin*/
+
+
+.clear{
+  clear:both;
+}
+.mypic{
+  width:200px;
+
+  float:left;
+
+}
+.top_nav{
+  float:left;
+  width:750px;
+  font-size: 160%;
+  font-family: cursive;
+
+}
+.top_nav ul li{
+  float:left;
+  padding:30px 100px;
+  }
+/* floating aside and main sections*/
+.left_side{
+  float:left;
+  width:700px;
+  font-size:120%;
+}
+.right_side{
+  float:left;
+  width:300px;
+}
+fieldset{
+  padding-left:10px;
+}
+.form{
+  width:275px;
+  border:solid;
+
+}
+.form label{
+  float:left;
+/*make footer clear floater elements*/
+.page_footer{
+  clear:both;
+}
+}
+
+
