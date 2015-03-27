@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)    # Not the final implementation!
+    @user = User.new(user_params)
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
@@ -33,14 +33,13 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:sucess] = "Profile Updated"
+      flash[:success] = "Profile updated"
       redirect_to @user
     else
       render 'edit'
     end
-  end   
+  end  
 
   def destroy
     User.find(params[:id]).destroy
@@ -69,13 +68,13 @@ private
                                  :password_confirmation)
   end
 
-  def logged_in_user
-    unless logged_in?
-      store_location  
-      flash[:danger] = "Please log in."
-      redirect_to login_url
-    end   
-  end
+  # def logged_in_user
+  #   unless logged_in?
+  #     store_location  
+  #     flash[:danger] = "Please log in."
+  #     redirect_to login_url
+  #   end   
+  # end
 
   def correct_user
     @user = User.find(params[:id])
@@ -85,6 +84,4 @@ private
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
-
-
 end
